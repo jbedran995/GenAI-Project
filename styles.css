@@ -1,0 +1,124 @@
+    body { display: flex; height: 100vh; margin: 0; }
+    .left-panel {
+    width: 30%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Keep this for overall alignment in the left panel */
+}    
+.dropdown-container {
+    margin-bottom: 20px;
+    width: 100%; /* Full width to align titles to the left */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This centers the dropdowns themselves */
+}
+.dropdown-container div {
+    align-self: flex-start; /* Aligns the title to the start (left) of the flex container */
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 80%; /* Ensure the titles align with the dropdowns */
+}
+select {
+    width: 80%; /* Adjust width to center the select elements */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    margin-top: 5px;
+}
+
+.dropdown-container, .button-container {
+        width: 100%; /* Ensure full width for alignment */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center content */
+    }
+    select {
+        width: 80%; /* Adjust width if needed */
+        /* Other styles remain the same */
+    }
+    .right-panel {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff; /* Light background for contrast */
+    padding: 20px; /* Spacing around content */
+}
+.message-area {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto; /* Ensure scrollbar for overflow */
+    border: 1px solid #e1e1e1; /* Subtle border around message area */
+    border-radius: 8px; /* Rounded corners for the message area */
+    margin-bottom: 20px; /* Space between message area and input area */
+    background-color: #f9f9f9; /* Slightly off-white background for the message area */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Soft shadow for depth */
+}
+.input-area {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px; /* Adjust padding for more space */
+    background-color: #f0f0f0; /* Light grey background for the input area */
+    border-radius: 22px; /* Rounded edges for the input area */
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); /* Inner shadow for depth */
+    width: calc(100% - 40px); /* Adjust width to fill space, accounting for padding in the right panel */
+    max-width: 1600px; /* Optional: Set a max width if needed */
+    margin: auto; /* Center the input area if there's a max-width */
+}
+.input-area input {
+    flex-grow: 1;
+    border: none; /* Remove default border */
+    background-color: transparent; /* Transparent background to fit with the styled input area */
+    margin-right: 10px; /* Space between input field and send button */
+    font-size: 16px; /* Slightly larger font size for readability */
+    width: 100%; /* Ensure input field takes up maximum width */
+}
+
+.input-area input:focus {
+    outline: none; /* Remove focus outline to maintain the styled look */
+}
+
+.input-area button {
+    padding: 10px 15px;
+    background-color: #007bff; /* ChatGPT-like blue for the button */
+    color: white;
+    border: none;
+    border-radius: 22px; /* Rounded edges for the button */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.input-area button:hover {
+    background-color: #0056b3; /* Darker blue on hover for the button */
+}
+    select { 
+        width: 100%; /* Make all dropdowns the same width */
+        padding: 8px; /* Add some padding inside the dropdown for aesthetics */
+        border: 1px solid #ccc; /* A light border for the dropdowns */
+        border-radius: 4px; /* Rounded corners for the dropdowns */
+        background-color: white; /* Background color */
+        box-shadow: 0 2px 3px rgba(0,0,0,0.1); /* A subtle shadow for some depth */
+        margin-top: 5px;
+    }
+    .dropdown-container div {
+        font-weight: bold; /* Make the labels bold */
+        margin-bottom: 5px; /* Space between the label and the dropdown */
+    }
+    .button-container {
+        margin: 20px 0; /* Add some space around the button container */
+    }
+    .case-button {
+        padding: 10px 15px;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .case-button:hover {
+        background-color: darkblue;
+    }

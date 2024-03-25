@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat Interface</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="left-panel">
+    <div class="dropdown-container">
+        <div>Geography</div>
+        <select id="geography" onchange="removeDefaultOption(this)">
+            <option value="">Select</option>
+            <option value="middle-east">Middle East</option>
+            <option value="europe">Europe</option>
+            <option value="north-america">North America</option>
+        </select>
+    </div>
+    <div class="dropdown-container">
+        <div>Case Type</div>
+        <select id="case-Type" onchange="removeDefaultOption(this)">
+            <option value="">Select</option>
+            <option value="profitability">Profitability</option>
+            <option value="new-product">New Product</option>
+            <option value="market-entry">Market Entry</option>
+            <option value="m&a">M&A</option>
+        </select>
+    </div>
+    <div class="dropdown-container">
+        <div>Industry</div>
+                <select id="industry" onchange="removeDefaultOption(this)">
+
+            <option value="">Select</option>
+            <option value="telecommunication">Telecommunication</option>
+            <option value="industry">Industry</option>
+            <option value="utilities">Utilities</option>
+            <option value="retail">Retail</option>
+            <option value="consumer-goods">Consumer Goods</option>
+        </select>
+    </div>
+    <div class="dropdown-container">
+        <div>Difficulty</div>
+                        <select id="difficulty" onchange="removeDefaultOption(this)">
+            <option value="">Select</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+    </div>
+    <div class="button-container">
+        <button class="case-button">Case Me!</button>
+    </div>
+</div>
+
+<div class="right-panel">
+    <div class="message-area" id="messageArea">
+        <!-- Messages will be displayed here -->
+    </div>
+    <div class="input-area">
+        <input type="text" placeholder="Type your message..."  id="messageInput">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
