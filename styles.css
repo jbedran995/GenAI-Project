@@ -1,124 +1,231 @@
-    body { display: flex; height: 100vh; margin: 0; }
-    .left-panel {
-    width: 30%;
-    background-color: #f0f0f0;
-    padding: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Keep this for overall alignment in the left panel */
-}    
-.dropdown-container {
-    margin-bottom: 20px;
-    width: 100%; /* Full width to align titles to the left */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* This centers the dropdowns themselves */
-}
-.dropdown-container div {
-    align-self: flex-start; /* Aligns the title to the start (left) of the flex container */
-    font-weight: bold;
-    margin-bottom: 5px;
-    width: 80%; /* Ensure the titles align with the dropdowns */
-}
-select {
-    width: 80%; /* Adjust width to center the select elements */
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: white;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
-    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('background.jpg'); /* Adjust the path as necessary */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    text-align: center;
+    background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+
 }
 
-.dropdown-container, .button-container {
-        width: 100%; /* Ensure full width for alignment */
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center content */
-    }
-    select {
-        width: 80%; /* Adjust width if needed */
-        /* Other styles remain the same */
-    }
-    .right-panel {
-    flex-grow: 1;
+h1 {
+    font-size: 2.5rem;
+    color: #007bff; /* Bright color for the main title */
+    margin-bottom: 20px; /* Add some space below the title */
+}
+
+p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 20px; /* Add some space below the paragraph */
+}
+
+body:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+    z-index: -1;
+}
+
+h1, p {
+    color: white; /* Ensure text color contrasts well with the background */
+    text-shadow: 0px 0px 8px rgba(0,0,0,0.5); /* Text shadow for better legibility */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Button background */
+    color: white; /* Text color */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.team-section {
+    text-align: center;
+    margin-top: 40px; /* Adjust based on layout */
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap as needed */
+}
+
+.member {
     display: flex;
     flex-direction: column;
-    background-color: #fff; /* Light background for contrast */
-    padding: 20px; /* Spacing around content */
+    align-items: center;
+    width: 150px; /* Set a fixed width for each member's container */
 }
+
+.member img {
+    width: 100px; /* Keep your existing styles */
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px; /* Adjust this value as needed to control space between the icon and name */
+}
+
+
+.member p {
+    text-align: center; /* Center-align the names */
+    margin: 0;
+    height: 40px; /* Set a fixed height to accommodate the name */
+}
+
+h3 {
+    font-size: 2rem; /* Slightly smaller than the h1, adjust as needed */
+    color: white; /* Matching the bright blue color */
+    margin-top: 10px; /* Space above the heading, adjust as needed */
+    margin-bottom: 40pxx; /* Space below the heading */
+}
+
+@media (max-width: 768px) {
+    h1, h3 {
+        font-size: 1.5rem; /* Smaller font size for mobile devices */
+    }
+}
+
+/* Add a semi-transparent background for the form on the menu page */
+.menu-container {
+    background-color: rgba(255, 255, 255, 0.95); /* White with more transparency */
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 30px;
+    width: auto;
+    max-width: 400px;
+}
+
+/* Style for the dropdowns within the menu container */
+.menu-container select {
+    width: 100%; /* Full width of the container */
+    padding: 12px 16px;
+    margin-bottom: 20px; /* Space between dropdowns */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Slight shadow for depth */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+/* The button within the menu container should match the style from the welcome page */
+.menu-container button {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 10px; /* Space above the button */
+    /* Other button styles like background-color and hover effects remain the same */
+}
+
+/* Headings and paragraphs within the menu container */
+.menu-container h2, .menu-container p {
+    color: #333; /* Dark color for contrast against the light background */
+    text-shadow: none; /* No text shadow here to maintain readability */
+}
+
+/* Additional responsive adjustments as needed */
+@media (max-width: 768px) {
+    .menu-container {
+        padding: 20px;
+    }
+}
+
+/* Chat Container styles */
+.chat-container {
+    width: 100%;
+    max-width: 800px; /* Or any width you prefer */
+    margin: auto;
+    background: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 80vh; /* Adjust based on your layout */
+    overflow: hidden;
+}
+
+/* Message Area styles */
 .message-area {
     flex-grow: 1;
     padding: 20px;
-    overflow-y: auto; /* Ensure scrollbar for overflow */
-    border: 1px solid #e1e1e1; /* Subtle border around message area */
-    border-radius: 8px; /* Rounded corners for the message area */
-    margin-bottom: 20px; /* Space between message area and input area */
-    background-color: #f9f9f9; /* Slightly off-white background for the message area */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Soft shadow for depth */
-}
-.input-area {
-    display: flex;
-    align-items: center;
-    padding: 8px 15px; /* Adjust padding for more space */
-    background-color: #f0f0f0; /* Light grey background for the input area */
-    border-radius: 22px; /* Rounded edges for the input area */
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); /* Inner shadow for depth */
-    width: calc(100% - 40px); /* Adjust width to fill space, accounting for padding in the right panel */
-    max-width: 1600px; /* Optional: Set a max width if needed */
-    margin: auto; /* Center the input area if there's a max-width */
-}
-.input-area input {
-    flex-grow: 1;
-    border: none; /* Remove default border */
-    background-color: transparent; /* Transparent background to fit with the styled input area */
-    margin-right: 10px; /* Space between input field and send button */
-    font-size: 16px; /* Slightly larger font size for readability */
-    width: 100%; /* Ensure input field takes up maximum width */
+    overflow-y: auto;
+    background: #e5e5e5; /* Light grey background for the message area */
 }
 
-.input-area input:focus {
-    outline: none; /* Remove focus outline to maintain the styled look */
+/* Input Area styles */
+.input-area {
+    display: flex;
+    padding: 10px;
+    background: #f0f0f0; /* Slightly darker background for input area */
+    border-top: 1px solid #ccc; /* Separator from message area */
+}
+
+.input-area input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
 }
 
 .input-area button {
-    padding: 10px 15px;
-    background-color: #007bff; /* ChatGPT-like blue for the button */
-    color: white;
+    padding: 10px 20px;
     border: none;
-    border-radius: 22px; /* Rounded edges for the button */
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
     cursor: pointer;
-    font-size: 16px;
 }
 
-.input-area button:hover {
-    background-color: #0056b3; /* Darker blue on hover for the button */
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .chat-container {
+        width: 90%;
+    }
 }
-    select { 
-        width: 100%; /* Make all dropdowns the same width */
-        padding: 8px; /* Add some padding inside the dropdown for aesthetics */
-        border: 1px solid #ccc; /* A light border for the dropdowns */
-        border-radius: 4px; /* Rounded corners for the dropdowns */
-        background-color: white; /* Background color */
-        box-shadow: 0 2px 3px rgba(0,0,0,0.1); /* A subtle shadow for some depth */
-        margin-top: 5px;
-    }
-    .dropdown-container div {
-        font-weight: bold; /* Make the labels bold */
-        margin-bottom: 5px; /* Space between the label and the dropdown */
-    }
-    .button-container {
-        margin: 20px 0; /* Add some space around the button container */
-    }
-    .case-button {
-        padding: 10px 15px;
-        background-color: blue;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-    .case-button:hover {
-        background-color: darkblue;
-    }
+
+/* Chat message styles */
+.message {
+    padding: 10px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    max-width: 70%;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.message.sent {
+    background-color: #b2fab4; /* Light green for sent messages */
+    align-self: flex-end;
+}
+
+.message.received {
+    background-color: #fab2b2; /* Light red/pink for received messages */
+    align-self: flex-start;
+}
